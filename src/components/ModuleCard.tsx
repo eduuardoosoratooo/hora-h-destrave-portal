@@ -31,7 +31,7 @@ const ModuleCard: React.FC<ModuleCardProps> = ({ module, onUnlock, onStart }) =>
   };
 
   const getButtonConfig = () => {
-    if (module.status === 'locked') {
+    if (module.status === 'locked' && !module.unlocked) {
       return {
         text: '🔓 Desbloquear Módulo',
         onClick: () => onUnlock(module.id),
@@ -39,13 +39,13 @@ const ModuleCard: React.FC<ModuleCardProps> = ({ module, onUnlock, onStart }) =>
       };
     } else if (module.status === 'in-progress') {
       return {
-        text: 'Continuar Módulo',
+        text: 'Continuar Estudos',
         onClick: () => onStart(module.id),
         className: 'bg-gradient-to-r from-green-600 to-green-500 text-white hover:transform hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(5,150,105,0.3)]'
       };
     } else {
       return {
-        text: 'Iniciar Módulo',
+        text: 'Iniciar Estudos',
         onClick: () => onStart(module.id),
         className: 'bg-gradient-to-r from-blue-700 to-blue-600 text-white hover:transform hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(30,64,175,0.3)]'
       };
@@ -53,7 +53,7 @@ const ModuleCard: React.FC<ModuleCardProps> = ({ module, onUnlock, onStart }) =>
   };
 
   const buttonConfig = getButtonConfig();
-  const cardClassName = module.status === 'locked' 
+  const cardClassName = (module.status === 'locked' && !module.unlocked)
     ? 'bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-amber-400 animate-[shimmer_2s_infinite]' 
     : 'bg-white';
 
@@ -91,6 +91,14 @@ const ModuleCard: React.FC<ModuleCardProps> = ({ module, onUnlock, onStart }) =>
           />
         </div>
       </div>
+
+      {/* Indicador de conteúdo disponível para módulos 1 e 2 */}
+      {(module.id === 'modulo-1' || module.id === 'modulo-2') && (
+        <div className="mb-4 flex items-center gap-2 text-sm text-blue-600 bg-blue-50 p-2 rounded-lg">
+          <span>📖</span>
+          <span>Conteúdo completo disponível</span>
+        </div>
+      )}
 
       {/* Botão */}
       <Button

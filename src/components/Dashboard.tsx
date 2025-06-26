@@ -1,9 +1,9 @@
-
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import ProgressOverview from './ProgressOverview';
 import ModuleCard, { Module } from './ModuleCard';
 import PasswordModal from './PasswordModal';
+import ModuleContent from './ModuleContent';
 import { toast } from '@/hooks/use-toast';
 
 const initialModules: Module[] = [
@@ -46,6 +46,7 @@ const Dashboard: React.FC = () => {
   const [modules, setModules] = useState<Module[]>(initialModules);
   const [selectedModule, setSelectedModule] = useState<Module | null>(null);
   const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
+  const [currentModuleContent, setCurrentModuleContent] = useState<string | null>(null);
 
   // Carregar dados do localStorage
   useEffect(() => {
@@ -100,18 +101,38 @@ const Dashboard: React.FC = () => {
   };
 
   const handleStartModule = (moduleId: string) => {
-    setModules(prev => prev.map(m => 
-      m.id === moduleId 
-        ? { ...m, status: 'in-progress' as const, progress: Math.min(m.progress + 25, 100) }
-        : m
-    ));
-    
     const module = modules.find(m => m.id === moduleId);
-    toast({
-      title: "Módulo Iniciado!",
-      description: `Você começou o módulo "${module?.title}". Continue progredindo!`
-    });
+    if (module && (module.status === 'available' || module.unlocked)) {
+      // Atualizar progresso e status
+      setModules(prev => prev.map(m => 
+        m.id === moduleId 
+          ? { ...m, status: 'in-progress' as const, progress: Math.min(m.progress + 25, 100) }
+          : m
+      ));
+      
+      // Abrir conteúdo do módulo
+      setCurrentModuleContent(moduleId);
+      
+      toast({
+        title: "Módulo Iniciado!",
+        description: `Você começou o módulo "${module?.title}". Boa leitura!`
+      });
+    }
   };
+
+  const handleCloseModuleContent = () => {
+    setCurrentModuleContent(null);
+  };
+
+  // Se estiver visualizando conteúdo de módulo, mostrar apenas o conteúdo
+  if (currentModuleContent) {
+    return (
+      <ModuleContent 
+        moduleId={currentModuleContent} 
+        onClose={handleCloseModuleContent} 
+      />
+    );
+  }
 
   const stats = calculateStats();
 
