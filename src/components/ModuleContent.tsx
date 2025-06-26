@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, BookOpen, Target, Brain } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
 
 interface ModulePage {
   id: string;
@@ -54,6 +55,15 @@ const ModuleContent: React.FC<ModuleContentProps> = ({ moduleId, onClose }) => {
 
   const currentPage = moduleData.pages[currentPageIndex];
   const totalPages = moduleData.pages.length;
+  const isLastPage = currentPageIndex === totalPages - 1;
+
+  console.log('ModuleContent Debug:', {
+    moduleId,
+    currentPageIndex,
+    totalPages,
+    isLastPage,
+    pageId: currentPage.id
+  });
 
   const nextPage = () => {
     if (currentPageIndex < totalPages - 1) {
@@ -65,6 +75,30 @@ const ModuleContent: React.FC<ModuleContentProps> = ({ moduleId, onClose }) => {
     if (currentPageIndex > 0) {
       setCurrentPageIndex(currentPageIndex - 1);
     }
+  };
+
+  const handleFinishModule = () => {
+    console.log('Finishing module:', moduleId);
+    
+    // Atualizar progresso do módulo no localStorage
+    const savedModules = localStorage.getItem('destrave_modules');
+    if (savedModules) {
+      const modules = JSON.parse(savedModules);
+      const updatedModules = modules.map((module: any) => 
+        module.id === moduleId 
+          ? { ...module, progress: 100, status: 'completed' }
+          : module
+      );
+      localStorage.setItem('destrave_modules', JSON.stringify(updatedModules));
+    }
+
+    toast({
+      title: "Módulo Concluído! 🎉",
+      description: `Parabéns! Você finalizou o módulo "${moduleData.title}".`
+    });
+
+    // Voltar ao dashboard
+    onClose();
   };
 
   return (
@@ -144,14 +178,23 @@ const ModuleContent: React.FC<ModuleContentProps> = ({ moduleId, onClose }) => {
               {currentPageIndex + 1} / {totalPages}
             </div>
 
-            <Button
-              onClick={nextPage}
-              disabled={currentPageIndex === totalPages - 1}
-              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700"
-            >
-              Próxima Página
-              <ChevronRight size={16} />
-            </Button>
+            {isLastPage ? (
+              <Button
+                onClick={handleFinishModule}
+                className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white"
+              >
+                <Target size={16} />
+                Finalizar Módulo
+              </Button>
+            ) : (
+              <Button
+                onClick={nextPage}
+                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700"
+              >
+                Próxima Página
+                <ChevronRight size={16} />
+              </Button>
+            )}
           </div>
         </div>
       </div>
