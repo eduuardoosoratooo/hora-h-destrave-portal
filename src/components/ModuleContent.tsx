@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, BookOpen, Target, Brain } from 'lucide-react';
@@ -32,6 +31,18 @@ const ModuleContent: React.FC<ModuleContentProps> = ({ moduleId, onClose }) => {
           title: 'Módulo 2: O Mapa da Sua Mente',
           subtitle: 'Desvendando Seus Superpoderes Introvertidos',
           pages: module2Pages
+        };
+      case 'modulo-3':
+        return {
+          title: 'Módulo 3: Desarmando as Armadilhas',
+          subtitle: 'Neutralizando Suas Travas Internas',
+          pages: module3Pages
+        };
+      case 'modulo-4':
+        return {
+          title: 'Módulo 4: A Distinção que Liberta',
+          subtitle: 'Introversão, Timidez e Ansiedade Social',
+          pages: module4Pages
         };
       default:
         return null;
@@ -917,6 +928,770 @@ const module2Pages: ModulePage[] = [
           <p className="text-lg">
             Quando você fala a partir da sua Bússola Interna, 
             sua voz não precisa ser alta para ser poderosa
+          </p>
+        </div>
+      </div>
+    )
+  }
+];
+
+// Páginas do Módulo 3
+const module3Pages: ModulePage[] = [
+  {
+    id: 'intro-travas',
+    title: 'Desarmando as Armadilhas',
+    illustration: (
+      <div className="flex justify-center space-x-4">
+        <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg flex items-center justify-center text-white text-2xl transform rotate-12">🔒</div>
+        <div className="text-3xl">→</div>
+        <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center text-white text-2xl transform -rotate-12">🔓</div>
+      </div>
+    ),
+    content: (
+      <div className="space-y-6">
+        <p className="text-xl text-purple-700 font-medium italic text-center">
+          "Se eu tenho tudo isso, por que às vezes parece tão difícil falar?"
+        </p>
+        
+        <p>
+          Depois de reconhecer a força dos seus superpoderes, surge uma pergunta inevitável. 
+          A resposta está nas "travas" internas — os bloqueios mentais e emocionais que nos 
+          impedem de usar nosso potencial.
+        </p>
+
+        <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-400">
+          <h4 className="font-bold text-red-800 mb-3">🔍 O Sistema Interligado</h4>
+          <p className="text-red-700">
+            Essas travas não são problemas isolados. Elas formam uma tríade tóxica que se retroalimenta: 
+            Perfeccionismo estabelece o padrão impossível, Medo do Julgamento é a ansiedade de falhar 
+            nesse padrão, e Síndrome do Impostor é a identidade de fraude que resulta desse conflito.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="bg-amber-50 p-4 rounded-lg text-center border border-amber-200">
+            <div className="text-3xl mb-2">🎯</div>
+            <h5 className="font-bold text-amber-800">Perfeccionismo</h5>
+            <p className="text-amber-700 text-sm">O padrão impossível</p>
+          </div>
+          <div className="bg-blue-50 p-4 rounded-lg text-center border border-blue-200">
+            <div className="text-3xl mb-2">😰</div>
+            <h5 className="font-bold text-blue-800">Medo do Julgamento</h5>
+            <p className="text-blue-700 text-sm">A ansiedade do fracasso</p>
+          </div>
+          <div className="bg-purple-50 p-4 rounded-lg text-center border border-purple-200">
+            <div className="text-3xl mb-2">👻</div>
+            <h5 className="font-bold text-purple-800">Síndrome do Impostor</h5>
+            <p className="text-purple-700 text-sm">A identidade de fraude</p>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-green-100 to-blue-100 p-6 rounded-xl">
+          <h4 className="font-bold text-green-800 mb-3">🗝️ A Boa Notícia</h4>
+          <p className="text-green-700">
+            Essas travas não são cadeados indestrutíveis. São portas que podem ser abertas 
+            com as chaves certas. Ao entender essa dinâmica, podemos desmantelar o sistema 
+            inteiro, em vez de apenas tratar os sintomas.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'domando-critico',
+    title: 'Domando o Crítico Interno: O Fim do Perfeccionismo Mal-adaptativo',
+    illustration: (
+      <div className="w-32 h-32 mx-auto bg-gradient-to-br from-amber-500 to-orange-500 rounded-full flex items-center justify-center text-white shadow-lg relative">
+        <span className="text-4xl">🎯</span>
+        <div className="absolute -top-1 -right-1 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold">X</div>
+      </div>
+    ),
+    content: (
+      <div className="space-y-6">
+        <p>
+          A primeira e mais fundamental trava é o "Crítico Interno Super Exigente". 
+          Muitos introvertidos desenvolvem um padrão de qualidade altíssima para si mesmos. 
+          Isso pode ser uma força, mas quando se torna perfeccionismo, vira uma armadilha.
+        </p>
+
+        <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-400">
+          <h4 className="font-bold text-amber-800 mb-3">⚠️ O que é Perfeccionismo Mal-adaptativo?</h4>
+          <p className="text-amber-700">
+            Não é a busca saudável pela excelência; é a crença de que "se não for perfeito, 
+            é um fracasso". É uma mentalidade de tudo ou nada que paralisa e desperdiça oportunidades.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+            <h5 className="font-bold text-green-800 mb-3">✅ Perfeccionismo Adaptativo</h5>
+            <ul className="text-green-700 space-y-2 text-sm">
+              <li>• Motivação saudável para fazer o melhor</li>
+              <li>• Foco no processo e melhoria</li>
+              <li>• Aceita "bom o suficiente" quando apropriado</li>
+              <li>• Gera satisfação e progresso</li>
+            </ul>
+          </div>
+          <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+            <h5 className="font-bold text-red-800 mb-3">❌ Perfeccionismo Mal-adaptativo</h5>
+            <ul className="text-red-700 space-y-2 text-sm">
+              <li>• Obsessão com evitação de erros</li>
+              <li>• Medo paralisante do fracasso</li>
+              <li>• "Se não for perfeito, é inútil"</li>
+              <li>• Gera ansiedade e procrastinação</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-amber-100 to-orange-100 p-6 rounded-xl">
+          <h4 className="font-bold text-amber-800 mb-4">📊 Exercício: Análise Custo-Benefício do Perfeccionismo</h4>
+          <div className="space-y-4">
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-white p-4 rounded-lg border-2 border-green-300">
+                <h5 className="font-bold text-green-800 mb-2">✅ Benefícios do Meu Perfeccionismo</h5>
+                <p className="text-green-700 text-sm mb-2">Liste o que você ganha:</p>
+                <ul className="text-green-600 text-sm space-y-1">
+                  <li>• "Entrego trabalho de alta qualidade"</li>
+                  <li>• "Evito críticas"</li>
+                  <li>• "Sou reconhecido pela excelência"</li>
+                </ul>
+              </div>
+              <div className="bg-white p-4 rounded-lg border-2 border-red-300">
+                <h5 className="font-bold text-red-800 mb-2">❌ Custos do Meu Perfeccionismo</h5>
+                <p className="text-red-700 text-sm mb-2">Seja brutalmente honesto:</p>
+                <ul className="text-red-600 text-sm space-y-1">
+                  <li>• "Ansiedade constante"</li>
+                  <li>• "Procrastino tarefas importantes"</li>
+                  <li>• "Perco prazos"</li>
+                  <li>• "Nunca me sinto satisfeito"</li>
+                  <li>• "Perco oportunidades de falar"</li>
+                </ul>
+              </div>
+            </div>
+            <div className="bg-blue-50 p-4 rounded-lg text-center">
+              <p className="text-blue-800 font-medium">
+                💡 Ao visualizar os custos superando os benefícios, sua motivação para mudar aumenta
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-amber-500 to-orange-500 text-white p-6 rounded-xl">
+          <h4 className="text-xl font-bold mb-3">🎯 Reestruturação Cognitiva</h4>
+          <p className="text-lg">
+            Transforme "Não posso dar essa sugestão porque não está 100% perfeita" 
+            em "Vou contribuir com uma nova perspectiva que pode ajudar a equipe"
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'monstrinho-e-se',
+    title: 'Expondo o "Monstrinho do E Se?": Reestruturação Cognitiva para o Medo do Julgamento',
+    illustration: (
+      <div className="w-32 h-32 mx-auto bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white shadow-lg relative">
+        <span className="text-4xl">😰</span>
+        <div className="absolute inset-0 border-4 border-blue-300 rounded-full animate-pulse opacity-50"></div>
+      </div>
+    ),
+    content: (
+      <div className="space-y-6">
+        <p>
+          Alimentado diretamente pelo perfeccionismo, surge a segunda trava: o "Monstrinho do 'E Se?'". 
+          É aquela voz ansiosa que pinta cenários catastróficos antes de qualquer interação social.
+        </p>
+
+        <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
+          <h4 className="font-bold text-blue-800 mb-3">👻 Os Sussuros do Monstrinho</h4>
+          <ul className="text-blue-700 space-y-2">
+            <li>• "E se acharem minha ideia boba?"</li>
+            <li>• "E se eu gaguejar?"</li>
+            <li>• "E se ninguém se importar com o que eu digo?"</li>
+            <li>• "E se me fizerem uma pergunta que não sei responder?"</li>
+          </ul>
+        </div>
+
+        <div className="bg-purple-50 p-6 rounded-lg border border-purple-200">
+          <h4 className="font-bold text-purple-800 mb-3">🔍 A Realidade por Trás do Medo</h4>
+          <p className="text-purple-700">
+            Esse medo não é sobre uma ameaça real, mas sobre a antecipação de um julgamento negativo. 
+            A ironia é que a maioria das pessoas está mais preocupada com seus próprios "monstrinhos" 
+            do que em te julgar com tanto rigor.
+          </p>
+        </div>
+
+        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl">
+          <h4 className="font-bold text-blue-800 mb-4">⚖️ Exercício: O Tribunal do Pensamento</h4>
+          <div className="space-y-4">
+            <div className="bg-white p-4 rounded-lg border-2 border-red-300">
+              <h5 className="font-bold text-red-800 mb-2">🔍 A Acusação</h5>
+              <p className="text-red-700 text-sm">
+                Escreva o pensamento ansioso exato:<br/>
+                <em>"Se eu falar na reunião, todos vão pensar que minha contribuição é irrelevante."</em>
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-red-50 p-4 rounded-lg">
+                <h5 className="font-bold text-red-800 mb-2">📋 Promotoria (Evidências A Favor)</h5>
+                <p className="text-red-700 text-sm">
+                  "Uma vez, há dois anos, fiz um comentário e ninguém respondeu."
+                </p>
+              </div>
+              <div className="bg-green-50 p-4 rounded-lg">
+                <h5 className="font-bold text-green-800 mb-2">🛡️ Defesa (Evidências Contra)</h5>
+                <ul className="text-green-700 text-sm space-y-1">
+                  <li>• "Meu chefe me elogiou na semana passada"</li>
+                  <li>• "Ana me pediu minha opinião ontem"</li>
+                  <li>• "É impossível saber o que 'todos' pensam"</li>
+                  <li>• "Achar algo irrelevante ≠ me julgar como pessoa"</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-blue-50 p-4 rounded-lg border-2 border-blue-300">
+              <h5 className="font-bold text-blue-800 mb-2">⚖️ O Veredito do Juiz</h5>
+              <p className="text-blue-700 text-sm">
+                "Embora eu tenha medo de que minha contribuição não seja valorizada, 
+                a evidência sugere que essa é uma preocupação exagerada. Meus colegas 
+                geralmente me respeitam. O risco de parecer 'irrelevante' é pequeno 
+                e vale a pena correr para compartilhar uma ideia útil."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6 rounded-xl">
+          <h4 className="text-xl font-bold mb-3">🧠 Tratando Pensamentos como Hipóteses</h4>
+          <p className="text-lg">
+            Seus pensamentos ansiosos não são fatos — são hipóteses a serem testadas
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'sindrome-impostor',
+    title: 'Desativando a Síndrome do Impostor: Separando Fatos de Ficção',
+    illustration: (
+      <div className="w-32 h-32 mx-auto bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white shadow-lg relative">
+        <span className="text-4xl">👻</span>
+        <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-lg">✓</div>
+      </div>
+    ),
+    content: (
+      <div className="space-y-6">
+        <p>
+          Quando o Crítico Interno estabelece um padrão de perfeição e o Monstrinho do "E Se?" 
+          te aterroriza com o medo de ser julgado, o resultado lógico é a terceira trava: 
+          a Síndrome do Impostor.
+        </p>
+
+        <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
+          <h4 className="font-bold text-purple-800 mb-3">🎭 O que é a Síndrome do Impostor?</h4>
+          <p className="text-purple-700">
+            É a sensação persistente de que você é uma fraude, que suas conquistas são 
+            resultado de sorte ou de enganar os outros, e que a qualquer momento você será "descoberto".
+          </p>
+        </div>
+
+        <div className="bg-red-50 p-6 rounded-lg border border-red-200">
+          <h4 className="font-bold text-red-800 mb-3">😈 A Crueldade da Síndrome</h4>
+          <p className="text-red-700">
+            Ela ignora as evidências objetivas. Você pode ter diploma, anos de experiência 
+            e uma lista de realizações, mas o sentimento interno é de inadequação. 
+            Ela prospera na desconexão entre realidade externa (seu sucesso) e 
+            interpretação interna (sua crença de que não o merece).
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-gray-50 p-4 rounded-lg">
+            <h5 className="font-bold text-gray-800 mb-3">📊 Realidade Externa</h5>
+            <ul className="text-gray-700 space-y-2 text-sm">
+              <li>• Diploma universitário</li>
+              <li>• 5 anos de experiência</li>
+              <li>• Projeto bem-sucedido no ano passado</li>
+              <li>• Feedback positivo dos colegas</li>
+              <li>• Promoção recente</li>
+            </ul>
+          </div>
+          <div className="bg-red-50 p-4 rounded-lg">
+            <h5 className="font-bold text-red-800 mb-3">🧠 Interpretação Interna</h5>
+            <ul className="text-red-700 space-y-2 text-sm">
+              <li>• "Tive sorte na faculdade"</li>
+              <li>• "Ainda não sei o suficiente"</li>
+              <li>• "A equipe que fez o trabalho"</li>
+              <li>• "Eles estão sendo educados"</li>
+              <li>• "Foi por falta de opção melhor"</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl">
+          <h4 className="font-bold text-purple-800 mb-4">📝 Exercício: O Diário de Fatos</h4>
+          <div className="space-y-4">
+            <div className="bg-white p-4 rounded-lg border-2 border-purple-300">
+              <h5 className="font-bold text-purple-800 mb-2">🎯 Comprometa-se por uma semana</h5>
+              <p className="text-purple-700 text-sm">
+                Por sete dias consecutivos, reserve cinco minutos no final do seu dia de trabalho.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-red-50 p-4 rounded-lg">
+                <h5 className="font-bold text-red-800 mb-2">❌ Ruim (história/julgamento)</h5>
+                <ul className="text-red-700 text-sm space-y-1">
+                  <li>• "Eu não fiz um bom trabalho na apresentação"</li>
+                  <li>• "Acho que ninguém gostou da minha ideia"</li>
+                </ul>
+              </div>
+              <div className="bg-green-50 p-4 rounded-lg">
+                <h5 className="font-bold text-green-800 mb-2">✅ Bom (fato observável)</h5>
+                <ul className="text-green-700 text-sm space-y-1">
+                  <li>• "Completei e entreguei a apresentação para a equipe"</li>
+                  <li>• "Apresentei minha sugestão sobre o projeto X"</li>
+                  <li>• "Ajudei o Carlos a encontrar os dados necessários"</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-blue-50 p-4 rounded-lg border-2 border-blue-300">
+              <h5 className="font-bold text-blue-800 mb-2">📋 Revise no final da semana</h5>
+              <p className="text-blue-700 text-sm">
+                Você terá uma lista de 21 realizações factuais. Leia em voz alta. 
+                Este é seu "arquivo de provas". É a realidade. O sentimento de ser 
+                uma fraude é apenas um sentimento, uma história.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-purple-500 to-pink-500 text-white p-6 rounded-xl">
+          <h4 className="text-xl font-bold mb-3">🔍 A Chave para Desativar</h4>
+          <p className="text-lg">
+            Forçar uma reconexão com a realidade objetiva — separar fatos das histórias 
+            que você conta a si mesmo
+          </p>
+        </div>
+      </div>
+    )
+  }
+];
+
+// Páginas do Módulo 4
+const module4Pages: ModulePage[] = [
+  {
+    id: 'intro-distincao',
+    title: 'A Distinção que Liberta',
+    illustration: (
+      <div className="flex justify-center space-x-4">
+        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-teal-500 rounded-lg flex items-center justify-center text-white text-2xl">🧘</div>
+        <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center text-white text-2xl">😊</div>
+        <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg flex items-center justify-center text-white text-2xl">😰</div>
+      </div>
+    ),
+    content: (
+      <div className="space-y-6">
+        <p className="text-xl text-blue-700 font-medium italic text-center">
+          "A confusão de termos é perigosa — leva a soluções erradas para problemas mal diagnosticados."
+        </p>
+        
+        <p>
+          Um dos maiores obstáculos no caminho para a comunicação autêntica é a confusão de termos. 
+          A cultura do "Ideal Extrovertido" frequentemente agrupa introversão, timidez e ansiedade 
+          social em uma única categoria negativa.
+        </p>
+
+        <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-400">
+          <h4 className="font-bold text-red-800 mb-3">⚠️ O Perigo da Confusão</h4>
+          <p className="text-red-700">
+            Tratar a introversão (uma característica de temperamento) com técnicas para 
+            ansiedade social (uma condição de saúde mental) é como tentar consertar o 
+            motor de um carro elétrico com as ferramentas de um motor a diesel. Não funciona 
+            e causa ainda mais frustração.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="bg-blue-50 p-4 rounded-lg text-center border border-blue-200">
+            <div className="text-3xl mb-2">🧘</div>
+            <h5 className="font-bold text-blue-800">Introversão</h5>
+            <p className="text-blue-700 text-sm">Característica de temperamento</p>
+          </div>
+          <div className="bg-yellow-50 p-4 rounded-lg text-center border border-yellow-200">
+            <div className="text-3xl mb-2">😊</div>
+            <h5 className="font-bold text-yellow-800">Timidez</h5>
+            <p className="text-yellow-700 text-sm">Comportamento aprendido</p>
+          </div>
+          <div className="bg-red-50 p-4 rounded-lg text-center border border-red-200">
+            <div className="text-3xl mb-2">😰</div>
+            <h5 className="font-bold text-red-800">Ansiedade Social</h5>
+            <p className="text-red-700 text-sm">Condição clínica</p>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-green-100 to-blue-100 p-6 rounded-xl">
+          <h4 className="font-bold text-green-800 mb-3">🎯 O Objetivo deste Módulo</h4>
+          <p className="text-green-700">
+            Fornecer clareza libertadora. Ao entender as diferenças fundamentais, você ganha 
+            a linguagem para definir sua própria experiência com precisão, resistir a rótulos 
+            incorretos e aplicar as estratégias certas para o seu desenvolvimento.
+          </p>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-blue-500 to-purple-500 text-white p-6 rounded-xl">
+          <h4 className="text-xl font-bold mb-3">🔍 Esta distinção não é apenas semântica</h4>
+          <p className="text-lg">É um ato de autoafirmação psicológica</p>
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'introversao-energia',
+    title: 'Introversão: Uma Questão de Energia, Não de Habilidade',
+    illustration: (
+      <div className="w-32 h-32 mx-auto bg-gradient-to-br from-blue-500 to-teal-500 rounded-full flex items-center justify-center text-white shadow-lg relative">
+        <span className="text-4xl">🔋</span>
+        <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-400 rounded-full animate-pulse"></div>
+      </div>
+    ),
+    content: (
+      <div className="space-y-6">
+        <p>
+          Como vimos no Módulo 1, a introversão é uma característica de personalidade inata, 
+          uma parte fundamental de quem você é. Sua essência não está relacionada com medo 
+          ou habilidade social, mas sim com a forma como seu cérebro processa a estimulação 
+          e gerencia sua energia.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
+            <h4 className="font-bold text-blue-800 mb-3">⚡ Fonte de Energia</h4>
+            <p className="text-blue-700 text-sm">
+              Introvertidos recarregam a "bateria social" através do tempo sozinhos, 
+              em ambientes de baixa estimulação. Interações sociais, especialmente em 
+              grandes grupos, consomem essa energia.
+            </p>
+          </div>
+          
+          <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-400">
+            <h4 className="font-bold text-teal-800 mb-3">🎯 Foco Principal</h4>
+            <p className="text-teal-700 text-sm">
+              A questão central é gestão de energia. A decisão de ir a uma festa ou 
+              sair mais cedo é uma escolha consciente para preservar ou recarregar 
+              energia, não um ato motivado pelo medo.
+            </p>
+          </div>
+          
+          <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
+            <h4 className="font-bold text-green-800 mb-3">❤️ Desejo de Interação</h4>
+            <p className="text-green-700 text-sm">
+              Introvertidos não desgostam de pessoas; frequentemente desejam conexões 
+              profundas e significativas. A preferência é por conversas um-a-um ou 
+              em pequenos grupos.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-blue-100 to-teal-100 p-6 rounded-xl">
+          <h4 className="font-bold text-blue-800 mb-4">🧠 Como Funciona o Cérebro Introvertido</h4>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg">
+              <h5 className="font-bold text-blue-800 mb-2">🔄 Processamento</h5>
+              <p className="text-blue-700 text-sm">
+                Preferem processar internamente antes de verbalizar. 
+                Pensam para falar, não falam para pensar.
+              </p>
+            </div>
+            <div className="bg-white p-4 rounded-lg">
+              <h5 className="font-bold text-teal-800 mb-2">🎚️ Sensibilidade</h5>
+              <p className="text-teal-700 text-sm">
+                Sistema nervoso mais sensível à estimulação. 
+                Ambientes calmos são ideais para performance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-blue-500 to-teal-500 text-white p-6 rounded-xl">
+          <h4 className="text-xl font-bold mb-3">🔑 Ponto-chave</h4>
+          <p className="text-lg">
+            Introversão é sobre COMO você processa informação e gerencia energia, 
+            não sobre medo ou falta de habilidade social
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'timidez-medo',
+    title: 'Timidez: O Medo do Julgamento Social',
+    illustration: (
+      <div className="w-32 h-32 mx-auto bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center text-white shadow-lg relative">
+        <span className="text-4xl">😊</span>
+        <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-red-400 rounded-full flex items-center justify-center text-white text-xs">?</div>
+      </div>
+    ),
+    content: (
+      <div className="space-y-6">
+        <p>
+          A timidez, por outro lado, não é sobre energia; é sobre medo. É a apreensão 
+          e o desconforto sentidos em situações sociais, impulsionados pelo medo do 
+          julgamento, da crítica ou da rejeição.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-400">
+            <h4 className="font-bold text-yellow-800 mb-3">🌱 Fonte</h4>
+            <p className="text-yellow-700 text-sm">
+              A timidez não é necessariamente inata como a introversão. É um comportamento 
+              que pode ser aprendido e, mais importante, desaprendido com prática e 
+              aumento da autoconfiança.
+            </p>
+          </div>
+          
+          <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-400">
+            <h4 className="font-bold text-orange-800 mb-3">🎯 Foco Principal</h4>
+            <p className="text-orange-700 text-sm">
+              O foco da timidez é o medo da avaliação social negativa. A pessoa tímida 
+              se preocupa excessivamente com o que os outros vão pensar dela.
+            </p>
+          </div>
+          
+          <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-400">
+            <h4 className="font-bold text-red-800 mb-3">👥 Quem Afeta</h4>
+            <p className="text-red-700 text-sm">
+              A timidez pode afetar qualquer pessoa, tanto introvertidos quanto extrovertidos. 
+              Existe o "extrovertido tímido" — alguém que anseia por interação mas tem medo 
+              de ser rejeitado.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-yellow-100 to-orange-100 p-6 rounded-xl">
+          <h4 className="font-bold text-yellow-800 mb-4">🔍 Identificando a Timidez</h4>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg">
+              <h5 className="font-bold text-yellow-800 mb-2">🤔 Pensamentos Típicos</h5>
+              <ul className="text-yellow-700 text-sm space-y-1">
+                <li>• "O que vão pensar de mim?"</li>
+                <li>• "E se eu disser algo errado?"</li>
+                <li>• "Vou parecer bobo"</li>
+                <li>• "Melhor não arriscar"</li>
+              </ul>
+            </div>
+            <div className="bg-white p-4 rounded-lg">
+              <h5 className="font-bold text-orange-800 mb-2">😰 Sintomas Físicos</h5>
+              <ul className="text-orange-700 text-sm space-y-1">
+                <li>• Rubor facial</li>
+                <li>• Voz trêmula</li>
+                <li>• Evitação de contato visual</li>
+                <li>• Tensão muscular</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-green-50 p-6 rounded-lg border border-green-200">
+          <h4 className="font-bold text-green-800 mb-3">💡 A Boa Notícia sobre a Timidez</h4>
+          <p className="text-green-700">
+            Diferentemente da introversão (que é uma característica inata a ser abraçada), 
+            a timidez é um padrão comportamental que pode ser modificado. Com exposição 
+            gradual e técnicas de construção de confiança, a timidez pode ser significativamente reduzida.
+          </p>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-yellow-500 to-orange-500 text-white p-6 rounded-xl">
+          <h4 className="text-xl font-bold mb-3">🎯 Ponto-chave</h4>
+          <p className="text-lg">
+            Timidez é sobre MEDO do julgamento social, não sobre como você processa energia
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'ansiedade-social-tas',
+    title: 'Transtorno de Ansiedade Social (TAS): Quando o Medo se Torna Incapacitante',
+    illustration: (
+      <div className="w-32 h-32 mx-auto bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center text-white shadow-lg relative">
+        <span className="text-4xl">😰</span>
+        <div className="absolute inset-0 border-4 border-red-300 rounded-full animate-pulse opacity-50"></div>
+      </div>
+    ),
+    content: (
+      <div className="space-y-6">
+        <p>
+          O Transtorno de Ansiedade Social (TAS), também conhecido como fobia social, 
+          é uma condição de saúde mental diagnosticável. É a timidez levada a um extremo 
+          incapacitante.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-400">
+            <h4 className="font-bold text-red-800 mb-3">🧬 Fonte</h4>
+            <p className="text-red-700 text-sm">
+              O TAS é uma condição adquirida, muitas vezes resultante de uma combinação 
+              de predisposição genética e experiências de vida negativas (como bullying 
+              ou críticas severas).
+            </p>
+          </div>
+          
+          <div className="bg-pink-50 p-6 rounded-lg border-l-4 border-pink-400">
+            <h4 className="font-bold text-pink-800 mb-3">🚨 Foco Principal</h4>
+            <p className="text-pink-700 text-sm">
+              O medo do julgamento é tão intenso e irracional que leva à evitação 
+              sistemática de situações sociais. A pessoa experiencia uma resposta 
+              de medo (luta ou fuga).
+            </p>
+          </div>
+          
+          <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
+            <h4 className="font-bold text-purple-800 mb-3">💔 Impacto na Vida</h4>
+            <p className="text-purple-700 text-sm">
+              O TAS interfere significativamente na vida diária, prejudicando 
+              relacionamentos, carreira e bem-estar geral. A pessoa se isola não 
+              por preferência, mas por medo avassalador.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-red-100 to-pink-100 p-6 rounded-xl">
+          <h4 className="font-bold text-red-800 mb-4">⚠️ Sinais de TAS</h4>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg">
+              <h5 className="font-bold text-red-800 mb-2">🧠 Sintomas Cognitivos</h5>
+              <ul className="text-red-700 text-sm space-y-1">
+                <li>• Pensamentos catastróficos constantes</li>
+                <li>• Preocupação excessiva por semanas antes de eventos</li>
+                <li>• Autoavaliação extremamente negativa</li>
+                <li>• Dificuldade de concentração</li>
+              </ul>
+            </div>
+            <div className="bg-white p-4 rounded-lg">
+              <h5 className="font-bold text-pink-800 mb-2">💥 Sintomas Físicos</h5>
+              <ul className="text-pink-700 text-sm space-y-1">
+                <li>• Ataques de pânico</li>
+                <li>• Palpitações, sudorese intensa</li>
+                <li>• Tremores, náusea</li>
+                <li>• Evitação total de situações sociais</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-400">
+          <h4 className="font-bold text-amber-800 mb-3">🩺 Busque Ajuda Profissional</h4>
+          <p className="text-amber-700">
+            Se você se identifica com os sintomas de TAS, é importante buscar ajuda de um 
+            profissional de saúde mental. O TAS é uma condição tratável com terapia 
+            cognitivo-comportamental e, quando necessário, medicação.
+          </p>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-xl">
+          <h4 className="text-xl font-bold mb-3">🏥 Ponto-chave</h4>
+          <p className="text-lg">
+            TAS é uma condição clínica que requer tratamento profissional, 
+            não apenas técnicas de autoajuda
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'quadro-comparativo',
+    title: 'Por que a Diferença Importa: Quadro Comparativo',
+    illustration: (
+      <div className="w-32 h-32 mx-auto bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center text-white shadow-lg">
+        <span className="text-4xl">📊</span>
+      </div>
+    ),
+    content: (
+      <div className="space-y-6">
+        <p>
+          Entender essas distinções é libertador. Se você é um introvertido não-tímido, 
+          pode finalmente parar de se sentir culpado por precisar de tempo sozinho. 
+          Se você é um introvertido que também lida com timidez, pode separar os dois 
+          problemas e trabalhar estrategicamente em cada um.
+        </p>
+
+        <div className="overflow-x-auto">
+          <table className="w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+            <thead>
+              <tr className="bg-gray-50">
+                <th className="p-4 text-left font-bold text-gray-800 border-b">Característica</th>
+                <th className="p-4 text-left font-bold text-blue-800 border-b">Introversão</th>
+                <th className="p-4 text-left font-bold text-yellow-800 border-b">Timidez</th>
+                <th className="p-4 text-left font-bold text-red-800 border-b">Ansiedade Social (TAS)</th>
+              </tr>
+            </thead>
+            <tbody className="text-sm">
+              <tr className="border-b">
+                <td className="p-4 font-semibold">Fonte Principal</td>
+                <td className="p-4 text-blue-700">Traço inato de temperamento</td>
+                <td className="p-4 text-yellow-700">Comportamento aprendido</td>
+                <td className="p-4 text-red-700">Condição de saúde mental</td>
+              </tr>
+              <tr className="border-b bg-gray-50">
+                <td className="p-4 font-semibold">Foco Central</td>
+                <td className="p-4 text-blue-700">Gestão de energia</td>
+                <td className="p-4 text-yellow-700">Medo do julgamento</td>
+                <td className="p-4 text-red-700">Medo extremo e incapacitante</td>
+              </tr>
+              <tr className="border-b">
+                <td className="p-4 font-semibold">Eventos Sociais</td>
+                <td className="p-4 text-blue-700">Pode gostar, mas precisa recarregar depois</td>
+                <td className="p-4 text-yellow-700">Sente desconforto e ansiedade</td>
+                <td className="p-4 text-red-700">Evita ativamente por medo intenso</td>
+              </tr>
+              <tr className="border-b bg-gray-50">
+                <td className="p-4 font-semibold">Desejo de Interação</td>
+                <td className="p-4 text-blue-700">Prefere conexões profundas em pequenos grupos</td>
+                <td className="p-4 text-yellow-700">Quer interagir, mas o medo impede</td>
+                <td className="p-4 text-red-700">Desejo ofuscado pelo medo avassalador</td>
+              </tr>
+              <tr>
+                <td className="p-4 font-semibold">Impacto na Vida</td>
+                <td className="p-4 text-blue-700">Estilo de vida que equilibra interação e solidão</td>
+                <td className="p-4 text-yellow-700">Pode limitar oportunidades se não gerido</td>
+                <td className="p-4 text-red-700">Incapacitante, prejudica funcionamento geral</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+            <h5 className="font-bold text-blue-800 mb-2">🧘 Se você é Introvertido</h5>
+            <p className="text-blue-700 text-sm">
+              Abrace sua natureza. Não é patologia, é uma forma válida de ser. 
+              Crie ambientes que honrem sua necessidade de quietude.
+            </p>
+          </div>
+          <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+            <h5 className="font-bold text-yellow-800 mb-2">😊 Se você é Tímido</h5>
+            <p className="text-yellow-700 text-sm">
+              Trabalhe na construção de confiança. Pratique exposição gradual 
+              a situações sociais. A timidez pode ser superada.
+            </p>
+          </div>
+          <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-400">
+            <h5 className="font-bold text-red-800 mb-2">😰 Se você tem TAS</h5>
+            <p className="text-red-700 text-sm">
+              Busque ajuda profissional. TAS é tratável com terapia adequada. 
+              Não há vergonha em pedir ajuda.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-green-500 to-blue-500 text-white p-6 rounded-xl">
+          <h4 className="text-xl font-bold mb-3">🎯 A Libertação da Clareza</h4>
+          <p className="text-lg">
+            Ao se localizar corretamente neste espectro, você pode parar de tentar "consertar" 
+            sua introversão e começar a celebrá-la, enquanto aborda qualquer timidez com as ferramentas certas
           </p>
         </div>
       </div>

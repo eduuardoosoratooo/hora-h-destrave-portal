@@ -31,13 +31,24 @@ const initialModules: Module[] = [
   },
   {
     id: "modulo-3",
-    title: "Estratégias de Implementação",
-    description: "Como colocar em prática tudo que você aprendeu de forma consistente.",
-    icon: "⚡",
+    title: "Desarmando as Armadilhas",
+    description: "Neutralize suas travas internas e liberte seu potencial de comunicação.",
+    icon: "🔓",
     iconColor: "purple",
     status: "locked", 
     progress: 0,
-    password: "evolua789",
+    password: "liberte789",
+    unlocked: false
+  },
+  {
+    id: "modulo-4",
+    title: "A Distinção que Liberta",
+    description: "Compreenda as diferenças entre introversão, timidez e ansiedade social.",
+    icon: "🧭",
+    iconColor: "blue",
+    status: "locked", 
+    progress: 0,
+    password: "clareza321",
     unlocked: false
   }
 ];
