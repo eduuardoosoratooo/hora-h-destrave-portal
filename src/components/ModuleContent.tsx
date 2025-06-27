@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, BookOpen, Target, Brain, Unlock, Compass, Lightbulb, Clock } from 'lucide-react';
+import { ArrowLeft, BookOpen, Target, Brain, Unlock, Compass, Lightbulb, Clock, Battery, Users } from 'lucide-react';
 
 interface ModuleContentProps {
   moduleId: string;
@@ -17,6 +16,8 @@ const ModuleContent: React.FC<ModuleContentProps> = ({ moduleId, onClose }) => {
       case 'modulo-4': return <Compass className="w-8 h-8" />;
       case 'modulo-5': return <Lightbulb className="w-8 h-8" />;
       case 'modulo-6': return <Clock className="w-8 h-8" />;
+      case 'modulo-7': return <Battery className="w-8 h-8" />;
+      case 'modulo-8': return <Users className="w-8 h-8" />;
       default: return <BookOpen className="w-8 h-8" />;
     }
   };
@@ -580,6 +581,283 @@ const ModuleContent: React.FC<ModuleContentProps> = ({ moduleId, onClose }) => {
           </div>
         );
 
+      case 'modulo-7':
+        return (
+          <div className="space-y-8">
+            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+              <h2 className="text-2xl font-bold text-green-900 mb-4">🔋 Pilar III - Gestão Inteligente da Energia</h2>
+              <p className="text-green-800 mb-4">
+                A base que sustenta tudo: aprenda a gerir sua energia social de forma estratégica para estar sempre no seu pico de performance quando realmente importa.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <section>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">7.1 Decodificando Sua Bateria Social</h3>
+                <p className="text-gray-700 mb-4">
+                  Para um introvertido, a energia social não é um recurso infinito. É uma bateria que se esgota com a interação e se recarrega com a solidão. O primeiro passo é tornar-se um perito na sua própria energia.
+                </p>
+                
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-red-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-red-800 mb-2">⚡ Drenos de Energia</h4>
+                    <ul className="list-disc list-inside text-red-700 text-sm space-y-1">
+                      <li>Ambientes com muita gente</li>
+                      <li>Barulho excessivo</li>
+                      <li>Conversas superficiais prolongadas</li>
+                      <li>Pressão para "estar ligado"</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-yellow-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-yellow-800 mb-2">⚠️ Sinais de Bateria Fraca</h4>
+                    <ul className="list-disc list-inside text-yellow-700 text-sm space-y-1">
+                      <li>"Névoa" cerebral</li>
+                      <li>Dificuldade de concentração</li>
+                      <li>Irritabilidade</li>
+                      <li>Desejo de ficar sozinho</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-2">🔋 Carregadores</h4>
+                    <ul className="list-disc list-inside text-green-700 text-sm space-y-1">
+                      <li>Tempo em solidão</li>
+                      <li>Leitura ou hobbies</li>
+                      <li>Música ou natureza</li>
+                      <li>Silêncio contemplativo</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">7.2 O Plano de Energia para a "Hora H"</h3>
+                <p className="text-gray-700 mb-4">
+                  Ir para um evento socialmente exigente sem um plano de energia é como fazer uma viagem sem saber onde ficam as estações de serviço.
+                </p>
+                
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-gray-300 text-sm">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="border border-gray-300 p-3 text-left">Fase do Evento</th>
+                        <th className="border border-gray-300 p-3 text-left">Estratégia</th>
+                        <th className="border border-gray-300 p-3 text-left">Ação Específica</th>
+                        <th className="border border-gray-300 p-3 text-left">Objetivo</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border border-gray-300 p-3 font-medium">Pré-Evento (24h antes)</td>
+                        <td className="border border-gray-300 p-3">Carregamento Proativo</td>
+                        <td className="border border-gray-300 p-3">30-60 min de tempo silencioso, revisar objetivos, dormir bem</td>
+                        <td className="border border-gray-300 p-3">Chegar com bateria a 100%</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-gray-300 p-3 font-medium">Início (Primeiros 30 min)</td>
+                        <td className="border border-gray-300 p-3">Ancoragem e Aclimatação</td>
+                        <td className="border border-gray-300 p-3">Chegar cedo, encontrar aliado, observar dinâmica</td>
+                        <td className="border border-gray-300 p-3">Aclimatação gradual</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-gray-300 p-3 font-medium">Durante (A cada 60 min)</td>
+                        <td className="border border-gray-300 p-3">Gestão Ativa</td>
+                        <td className="border border-gray-300 p-3">Pausas de 5 min em locais calmos</td>
+                        <td className="border border-gray-300 p-3">Evitar esgotamento total</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-gray-300 p-3 font-medium">Fim do Evento</td>
+                        <td className="border border-gray-300 p-3">Saída Elegante</td>
+                        <td className="border border-gray-300 p-3">Reconhecer sinais, ter frase de saída pronta</td>
+                        <td className="border border-gray-300 p-3">Sair antes do esgotamento</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-gray-300 p-3 font-medium">Pós-Evento (1-3h)</td>
+                        <td className="border border-gray-300 p-3">Recuperação</td>
+                        <td className="border border-gray-300 p-3">Detox social, banho, música calma</td>
+                        <td className="border border-gray-300 p-3">Iniciar recarga eficaz</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">7.3 Estilo de Vida Energeticamente Sustentável</h3>
+                <p className="text-gray-700 mb-4">
+                  O objetivo é construir uma vida em harmonia com seus ritmos energéticos naturais.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-blue-800 mb-2">💼 No Trabalho</h4>
+                    <ul className="list-disc list-inside text-blue-700 text-sm space-y-1">
+                      <li>Procure funções que permitam trabalho focado e autônomo</li>
+                      <li>Defenda seu tempo para trabalho profundo</li>
+                      <li>Use fones de ouvido como sinal de "não perturbe"</li>
+                      <li>Utilize trabalho remoto estrategicamente</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-purple-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-800 mb-2">🤝 Na Vida Social</h4>
+                    <ul className="list-disc list-inside text-purple-700 text-sm space-y-1">
+                      <li>Seja seletivo com compromissos - qualidade > quantidade</li>
+                      <li>Escolha eventos que tragam alegria e conexão</li>
+                      <li>Organize encontros que funcionem para você</li>
+                      <li>Prefira jantares pequenos a festas barulhentas</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-2">📅 Na Agenda Semanal</h4>
+                    <ul className="list-disc list-inside text-green-700 text-sm space-y-1">
+                      <li>Planeje intencionalmente "espaços em branco"</li>
+                      <li>Não preencha cada momento livre</li>
+                      <li>Trate tempo de recarga como compromisso inadiável</li>
+                      <li>Seja o arquiteto do seu próprio bem-estar</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        );
+
+      case 'modulo-8':
+        return (
+          <div className="space-y-8">
+            <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
+              <h2 className="text-2xl font-bold text-orange-900 mb-4">🎪 Comunicação Autêntica em Ação</h2>
+              <p className="text-orange-800 mb-4">
+                Aplique os três pilares do método nos cenários mais desafiadores: conflitos, networking e liderança, usando processos que se alinham com seus pontos fortes naturais.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <section>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">8.1 Navegando por Conflitos (Sem Guerra)</h3>
+                <p className="text-gray-700 mb-4">
+                  Evitar conflitos permite que o ressentimento cresça. A solução é encontrar uma forma de abordar o desacordo que minimize o drama e maximize a clareza.
+                </p>
+                
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <h4 className="font-semibold text-blue-800 mb-4">🗣️ Técnica: A "Declaração-Eu" (I-Statement)</h4>
+                  <p className="text-blue-700 mb-4">Uma ferramenta de comunicação não-violenta com quatro partes:</p>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">1</span>
+                      <div>
+                        <p className="font-medium text-blue-800">Eu sinto... [EMOÇÃO]</p>
+                        <p className="text-blue-700 text-sm">Use uma palavra de emoção específica (frustrado, preocupado, triste)</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-3">
+                      <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">2</span>
+                      <div>
+                        <p className="font-medium text-blue-800">quando... [COMPORTAMENTO]</p>
+                        <p className="text-blue-700 text-sm">Descreva o comportamento específico de forma factual e neutra</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-3">
+                      <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">3</span>
+                      <div>
+                        <p className="font-medium text-blue-800">porque... [IMPACTO]</p>
+                        <p className="text-blue-700 text-sm">Explique o impacto concreto que o comportamento tem em você</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-3">
+                      <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">4</span>
+                      <div>
+                        <p className="font-medium text-blue-800">Eu gostaria que... [PEDIDO]</p>
+                        <p className="text-blue-700 text-sm">Faça um pedido específico e acionável</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-4 p-3 bg-blue-100 rounded">
+                    <p className="text-blue-800 text-sm font-medium">Exemplo Completo:</p>
+                    <p className="text-blue-700 text-sm italic">"Eu sinto-me frustrado quando sou interrompido a meio de uma frase na reunião, porque sinto que a minha contribuição não é valorizada e perco a minha linha de raciocínio. Eu gostaria que me deixasse terminar o meu ponto antes de partilhar a sua opinião."</p>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">8.2 Networking que Conecta (Sem Falsidade)</h3>
+                <p className="text-gray-700 mb-4">
+                  O verdadeiro objetivo do networking é construir relacionamentos profissionais autênticos. A estratégia: qualidade em vez de quantidade.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-2">✅ Estratégias Eficazes</h4>
+                    <ul className="list-disc list-inside text-green-700 text-sm space-y-1">
+                      <li><strong>Prepare-se:</strong> Pesquise 1-2 pessoas específicas</li>
+                      <li><strong>Seja o anfitrião:</strong> Procure quem parece desconfortável</li>
+                      <li><strong>Use superpoderes:</strong> Ative sua "superaudição"</li>
+                      <li><strong>Saída elegante:</strong> Saiba como terminar conversas</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-red-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-red-800 mb-2">❌ Evite</h4>
+                    <ul className="list-disc list-inside text-red-700 text-sm space-y-1">
+                      <li>Tentar "trabalhar a sala toda"</li>
+                      <li>Conversas superficiais forçadas</li>
+                      <li>Trocar cartões sem conexão real</li>
+                      <li>Focar em "vender-se" vs. conhecer outros</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="bg-yellow-50 p-4 rounded-lg mt-4">
+                  <h4 className="font-semibold text-yellow-800 mb-2">💡 Pergunta Poderosa para Iniciar</h4>
+                  <p className="text-yellow-700 text-sm">"O que o traz a este evento?" - Uma forma natural e não invasiva de começar uma conversa significativa.</p>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">8.3 A Liderança Silenciosa: Influência Sem Holofotes</h3>
+                <p className="text-gray-700 mb-4">
+                  Existe um estilo de liderança igualmente poderoso: a liderança silenciosa. Líderes como Bill Gates e Tim Cook lideram através da profundidade do pensamento e capacidade de capacitar outros.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-purple-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-800 mb-2">🎯 Forças do Líder Introvertido</h4>
+                    <ul className="list-disc list-inside text-purple-700 text-sm space-y-1">
+                      <li><strong>Escuta Ativa:</strong> Mais receptivo a ideias da equipe</li>
+                      <li><strong>Decisões Ponderadas:</strong> Analisa dados e consequências</li>
+                      <li><strong>Capacitação:</strong> Cria espaço para outros brilharem</li>
+                      <li><strong>Preparação:</strong> Lidera através da competência</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-indigo-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-indigo-800 mb-2">🌟 Características da Liderança Silenciosa</h4>
+                    <ul className="list-disc list-inside text-indigo-700 text-sm space-y-1">
+                      <li>Influência através da substância, não do volume</li>
+                      <li>Fomenta inovação e segurança psicológica</li>
+                      <li>Calma sob pressão em tempos de crise</li>
+                      <li>Aumenta motivação e proatividade da equipe</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="bg-gray-50 p-4 rounded-lg mt-4">
+                  <h4 className="font-semibold text-gray-800 mb-2">💪 Conselho para Líderes Introvertidos</h4>
+                  <p className="text-gray-700 text-sm">Não tente imitar um estilo extrovertido. Abrace suas forças naturais: lidere a partir da sua calma, preparação e capacidade de ouvir. Sua influência virá da substância, não do volume.</p>
+                </div>
+              </section>
+            </div>
+          </div>
+        );
+
       default:
         return (
           <div className="text-center py-12">
@@ -599,6 +877,8 @@ const ModuleContent: React.FC<ModuleContentProps> = ({ moduleId, onClose }) => {
       case 'modulo-4': return 'A Distinção que Liberta';
       case 'modulo-5': return 'Pilar I - Clareza Interna Absoluta';
       case 'modulo-6': return 'Pilar II - Estratégia do Momento Certo';
+      case 'modulo-7': return 'Pilar III - Gestão Inteligente da Energia';
+      case 'modulo-8': return 'Comunicação Autêntica em Ação';
       default: return 'Módulo';
     }
   };

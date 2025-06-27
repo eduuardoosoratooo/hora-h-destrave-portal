@@ -73,6 +73,28 @@ const initialModules: Module[] = [
     progress: 0,
     password: "timing666",
     unlocked: false
+  },
+  {
+    id: "modulo-7",
+    title: "Pilar III - Gestão Inteligente da Energia",
+    description: "Aprenda a gerir sua energia social para estar sempre no seu pico de performance.",
+    icon: "🔋",
+    iconColor: "green",
+    status: "locked", 
+    progress: 0,
+    password: "energia777",
+    unlocked: false
+  },
+  {
+    id: "modulo-8",
+    title: "Comunicação Autêntica em Ação",
+    description: "Aplique tudo que aprendeu em cenários de alto impacto como conflitos e liderança.",
+    icon: "🎪",
+    iconColor: "orange",
+    status: "locked", 
+    progress: 0,
+    password: "acao888",
+    unlocked: false
   }
 ];
 
