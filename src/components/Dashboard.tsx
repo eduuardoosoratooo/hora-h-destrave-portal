@@ -95,6 +95,28 @@ const initialModules: Module[] = [
     progress: 0,
     password: "acao888",
     unlocked: false
+  },
+  {
+    id: "modulo-9",
+    title: "O Fim da Invisibilidade",
+    description: "Histórias de sucesso e o impacto real da comunicação autêntica no mundo.",
+    icon: "🌟",
+    iconColor: "blue",
+    status: "locked", 
+    progress: 0,
+    password: "sucesso999",
+    unlocked: false
+  },
+  {
+    id: "modulo-10",
+    title: "A Jornada Contínua",
+    description: "Integre o método para uma vida plena e autêntica como introvertido.",
+    icon: "🏆",
+    iconColor: "green",
+    status: "locked", 
+    progress: 0,
+    password: "jornada000",
+    unlocked: false
   }
 ];
 

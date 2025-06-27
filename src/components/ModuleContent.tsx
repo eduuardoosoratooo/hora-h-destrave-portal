@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, BookOpen, Target, Brain, Unlock, Compass, Lightbulb, Clock, Battery, Users } from 'lucide-react';
+import { ArrowLeft, BookOpen, Target, Brain, Unlock, Compass, Lightbulb, Clock, Battery, Users, Star, Trophy } from 'lucide-react';
 
 interface ModuleContentProps {
   moduleId: string;
@@ -18,6 +18,8 @@ const ModuleContent: React.FC<ModuleContentProps> = ({ moduleId, onClose }) => {
       case 'modulo-6': return <Clock className="w-8 h-8" />;
       case 'modulo-7': return <Battery className="w-8 h-8" />;
       case 'modulo-8': return <Users className="w-8 h-8" />;
+      case 'modulo-9': return <Star className="w-8 h-8" />;
+      case 'modulo-10': return <Trophy className="w-8 h-8" />;
       default: return <BookOpen className="w-8 h-8" />;
     }
   };
@@ -858,6 +860,308 @@ const ModuleContent: React.FC<ModuleContentProps> = ({ moduleId, onClose }) => {
           </div>
         );
 
+      case 'modulo-9':
+        return (
+          <div className="space-y-8">
+            <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+              <h2 className="text-2xl font-bold text-blue-900 mb-4">🌟 O Fim da Invisibilidade</h2>
+              <p className="text-blue-800 mb-4">
+                Explore como a introversão, quando abraçada e não combatida, não só é compatível com o sucesso, como muitas vezes é o seu principal ingrediente.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <section>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">9.1 Gigantes Silenciosos: Como a Introversão Moldou o Mundo</h3>
+                <p className="text-gray-700 mb-4">
+                  A história está repleta de "gigantes silenciosos" — indivíduos introvertidos cujas contribuições mudaram o curso da ciência, tecnologia, arte e política. O seu sucesso não aconteceu apesar da introversão, mas por causa dela.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-purple-50 p-6 rounded-lg">
+                    <h4 className="font-semibold text-purple-800 mb-3 flex items-center gap-2">
+                      💻 Bill Gates
+                    </h4>
+                    <p className="text-purple-700 text-sm mb-3">
+                      O cofundador da Microsoft atribui grande parte do seu sucesso à capacidade de se isolar por longos períodos ("think weeks") para ler, pensar profundamente e analisar problemas complexos.
+                    </p>
+                    <div className="bg-purple-100 p-3 rounded">
+                      <p className="text-purple-600 text-xs italic">
+                        "Ele construiu uma empresa baseada no poder do pensamento profundo e contratou extrovertidos para funções que exigiam esse perfil."
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-green-50 p-6 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-3 flex items-center gap-2">
+                      🧪 Albert Einstein
+                    </h4>
+                    <p className="text-green-700 text-sm mb-3">
+                      Notoriamente introspectivo, preferia a solidão dos seus pensamentos à socialização constante. Foi nessa quietude que desenvolveu suas teorias revolucionárias.
+                    </p>
+                    <div className="bg-green-100 p-3 rounded">
+                      <p className="text-green-600 text-xs italic">
+                        "A monotonia e a solidão de uma vida tranquila estimulam a mente criativa"
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-orange-50 p-6 rounded-lg">
+                    <h4 className="font-semibold text-orange-800 mb-3 flex items-center gap-2">
+                      🎬 Steven Spielberg
+                    </h4>
+                    <p className="text-orange-700 text-sm mb-3">
+                      Sentia-se um estranho na infância e preferia perder-se em mundos de fantasia. Essa rica vida interior tornou-se a matéria-prima para seus filmes icônicos.
+                    </p>
+                    <div className="bg-orange-100 p-3 rounded">
+                      <p className="text-orange-600 text-xs italic">
+                        "Sua capacidade de observação das emoções humanas conecta com milhões de pessoas a um nível profundo."
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <h4 className="font-semibold text-blue-800 mb-3 flex items-center gap-2">
+                      👥 Mark Zuckerberg
+                    </h4>
+                    <p className="text-blue-700 text-sm mb-3">
+                      Conhecido por ser tímido e introvertido, sua força está numa visão analítica e focada a longo prazo, não em discursos inspiradores.
+                    </p>
+                    <div className="bg-blue-100 p-3 rounded">
+                      <p className="text-blue-600 text-xs italic">
+                        "Exemplifica como a liderança moderna é mais sobre compreensão profunda que comunicação efusiva."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-yellow-50 p-4 rounded-lg mt-6">
+                  <h4 className="font-semibold text-yellow-800 mb-2">🎯 Padrão de Sucesso</h4>
+                  <p className="text-yellow-700 text-sm">
+                    <strong>O sucesso autêntico vem de dobrar o mundo às suas forças, não de se dobrar às expectativas do mundo.</strong>
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">9.2 O Efeito Cascata na Sua Vida</h3>
+                <p className="text-gray-700 mb-4">
+                  Quando você aplica o Método Destrave na Hora H e comunica-se com autenticidade, a mudança cria um "efeito cascata" positivo em todas as áreas da vida.
+                </p>
+
+                <div className="space-y-4">
+                  <div className="bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-lg">
+                    <h4 className="font-semibold text-purple-800 mb-3 flex items-center gap-2">
+                      💼 Na Sua Carreira
+                    </h4>
+                    <ul className="list-disc list-inside text-purple-700 text-sm space-y-2">
+                      <li>Contribuições claras e bem posicionadas começam a ser notadas</li>
+                      <li>Deixa de ser o "quietinho" e passa a ser o "pensador estratégico"</li>
+                      <li>Reconhecimento, oportunidades e promoções surgem naturalmente</li>
+                      <li>Ganha crédito pelas suas ideias e trabalho</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-3 flex items-center gap-2">
+                      ❤️ Nos Seus Relacionamentos
+                    </h4>
+                    <ul className="list-disc list-inside text-green-700 text-sm space-y-2">
+                      <li>Capacidade de expressar necessidades claramente (Declaração-Eu)</li>
+                      <li>Escuta profunda transformando as relações</li>
+                      <li>Comunicação mais honesta e menos reativa</li>
+                      <li>Fortalecimento de laços de confiança e intimidade</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg">
+                    <h4 className="font-semibold text-blue-800 mb-3 flex items-center gap-2">
+                      🌱 Na Sua Vida Pessoal
+                    </h4>
+                    <ul className="list-disc list-inside text-blue-700 text-sm space-y-2">
+                      <li>Ansiedade social diminui drasticamente</li>
+                      <li>Medo de julgamento substituído por confiança calma</li>
+                      <li>Maior controle das interações e energia</li>
+                      <li>Liberdade para ser autêntico sem "representar"</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">9.3 Deixando Sua Marca: O Poder da Sua Ideia Expressa</h3>
+                <p className="text-gray-700 mb-4">
+                  Destravar a sua voz é mais que desenvolvimento pessoal; é um ato de serviço. O mundo precisa das perspectivas ponderadas e soluções criativas das mentes introvertidas.
+                </p>
+
+                <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-lg border-2 border-orange-200">
+                  <h4 className="font-semibold text-orange-800 mb-3">⚠️ O Custo do Silêncio</h4>
+                  <p className="text-orange-700 text-sm mb-3">
+                    Cada vez que você retém uma ideia por medo ou hesitação:
+                  </p>
+                  <ul className="list-disc list-inside text-orange-600 text-sm space-y-1">
+                    <li>Não é apenas você que perde</li>
+                    <li>A sua equipe perde uma potencial solução</li>
+                    <li>A sua empresa perde uma oportunidade de inovação</li>
+                    <li>A sua comunidade perde uma perspectiva valiosa</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-lg border-2 border-green-200 mt-4">
+                  <h4 className="font-semibold text-green-800 mb-3">✨ O Poder da Sua Voz</h4>
+                  <p className="text-green-700 text-sm">
+                    A sua voz, com a sua calma, profundidade e convicção únicas, tem o poder de cortar o ruído. Tem o poder de fazer os outros pararem, pensarem e verem as coisas de uma nova maneira. <strong>Ao destravar a sua voz, você está cumprindo a sua responsabilidade de partilhar os seus dons com o mundo.</strong>
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+        );
+
+      case 'modulo-10':
+        return (
+          <div className="space-y-8">
+            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+              <h2 className="text-2xl font-bold text-green-900 mb-4">🏆 A Jornada Contínua</h2>
+              <p className="text-green-800 mb-4">
+                Integre o Método Destrave na Hora H como um novo sistema operativo para uma vida plena e autêntica. A verdadeira transformação é criar uma vida onde você prospera sendo exatamente quem é.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <section>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">10.1 A Comunicação é um Músculo: A Prática Leva à Confiança</h3>
+                <p className="text-gray-700 mb-4">
+                  Assim como a aptidão física, a competência comunicativa é um músculo. Ele se fortalece com exercício consistente e deliberado, não apenas lendo sobre teoria.
+                </p>
+
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-blue-800 mb-2 flex items-center gap-2">
+                      🐣 Comece Pequeno
+                    </h4>
+                    <ul className="text-blue-700 text-sm space-y-1">
+                      <li>• Pratique "Declaração-Eu" com amigos</li>
+                      <li>• Use "Entrada Suave" em conversas casuais</li>
+                      <li>• Aplique "Regra dos 3 Pontos" para explicar filmes</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-yellow-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-yellow-800 mb-2 flex items-center gap-2">
+                      📈 Aumente Gradualmente
+                    </h4>
+                    <ul className="text-yellow-700 text-sm space-y-1">
+                      <li>• Use técnicas em reuniões de equipe</li>
+                      <li>• Tente conversas profundas em networking</li>
+                      <li>• Cada vitória constrói a base para a próxima</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-2 flex items-center gap-2">
+                      💚 Seja Compassivo
+                    </h4>
+                    <ul className="text-green-700 text-sm space-y-1">
+                      <li>• Voltar a velhos padrões é normal</li>
+                      <li>• Não se critique - seja paciente</li>
+                      <li>• A jornada não é linear</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">10.2 O Ciclo Virtuoso da Confiança: Celebrando as Pequenas Vitórias</h3>
+                <p className="text-gray-700 mb-4">
+                  O cérebro aprende através de ciclos de feedback. Reconhecer e celebrar o progresso é fundamental para solidificar a nova confiança.
+                </p>
+
+                <div className="bg-purple-50 p-6 rounded-lg">
+                  <h4 className="font-semibold text-purple-800 mb-4">📝 Diário de Vitórias</h4>
+                  <p className="text-purple-700 text-sm mb-3">
+                    Tire um momento no final do dia para reconhecer seus sucessos:
+                  </p>
+                  
+                  <div className="space-y-3">
+                    <div className="bg-purple-100 p-3 rounded flex items-start gap-2">
+                      <span className="text-green-600">✅</span>
+                      <p className="text-purple-700 text-sm italic">"Hoje, eu queria fazer uma pergunta na reunião e fiz."</p>
+                    </div>
+                    <div className="bg-purple-100 p-3 rounded flex items-start gap-2">
+                      <span className="text-green-600">✅</span>
+                      <p className="text-purple-700 text-sm italic">"Hoje, senti minha bateria social baixar e me retirei por cinco minutos sem culpa."</p>
+                    </div>
+                    <div className="bg-purple-100 p-3 rounded flex items-start gap-2">
+                      <span className="text-green-600">✅</span>
+                      <p className="text-purple-700 text-sm italic">"Hoje, usei uma 'Declaração-Eu' e a conversa correu bem."</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-yellow-50 p-4 rounded-lg mt-4">
+                  <h4 className="font-semibold text-yellow-800 mb-2">🔄 Ciclo Virtuoso</h4>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="bg-blue-200 px-2 py-1 rounded">Prática</span>
+                    <span className="text-gray-500">→</span>
+                    <span className="bg-green-200 px-2 py-1 rounded">Vitórias</span>
+                    <span className="text-gray-500">→</span>
+                    <span className="bg-purple-200 px-2 py-1 rounded">Celebração</span>
+                    <span className="text-gray-500">→</span>
+                    <span className="bg-orange-200 px-2 py-1 rounded">Confiança</span>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">10.3 Desenhando Sua Vida Autêntica</h3>
+                <p className="text-gray-700 mb-4">
+                  A conclusão lógica desta jornada: se sua natureza é introvertida, a vida mais feliz e bem-sucedida é uma que honra essa natureza. Em vez de encaixar-se em moldes extrovertidos, desenhe uma vida que se ajuste à sua forma.
+                </p>
+
+                <div className="space-y-4">
+                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg">
+                    <h4 className="font-semibold text-blue-800 mb-3 flex items-center gap-2">
+                      💼 Na Carreira
+                    </h4>
+                    <p className="text-blue-700 text-sm">
+                      Procure trabalhos, funções e culturas de empresa que valorizem o pensamento profundo, a autonomia e a qualidade em vez da performance social constante.
+                    </p>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-3 flex items-center gap-2">
+                      👥 Nos Relacionamentos
+                    </h4>
+                    <p className="text-green-700 text-sm">
+                      Cultive amizades baseadas na profundidade e conexão mútua. Liberte-se da obrigação de manter relações que o drenam consistentemente.
+                    </p>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg">
+                    <h4 className="font-semibold text-purple-800 mb-3 flex items-center gap-2">
+                      ⏰ No Seu Tempo
+                    </h4>
+                    <p className="text-purple-700 text-sm">
+                      Proteja ferozmente seu tempo de solidão para recarregar. Veja-o não como luxo, mas como necessidade essencial para sua saúde mental e desempenho.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-gold-50 to-yellow-50 p-8 rounded-lg border-2 border-yellow-300 mt-8">
+                  <h4 className="font-bold text-2xl text-yellow-800 mb-4 text-center">🌟 Mensagem Final</h4>
+                  <p className="text-yellow-700 text-center">
+                    <strong>O Método Destrave na Hora H não é sobre transformar-se numa pessoa diferente. É sobre tornar-se mais profundamente quem você sempre foi, mas com as ferramentas e a confiança para expressar essa autenticidade ao mundo.</strong>
+                  </p>
+                  <p className="text-yellow-600 text-sm text-center mt-4 italic">
+                    Parabéns por ter chegado até aqui. Sua jornada de crescimento autêntico está apenas começando.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+        );
+
       default:
         return (
           <div className="text-center py-12">
@@ -879,6 +1183,8 @@ const ModuleContent: React.FC<ModuleContentProps> = ({ moduleId, onClose }) => {
       case 'modulo-6': return 'Pilar II - Estratégia do Momento Certo';
       case 'modulo-7': return 'Pilar III - Gestão Inteligente da Energia';
       case 'modulo-8': return 'Comunicação Autêntica em Ação';
+      case 'modulo-9': return 'O Fim da Invisibilidade';
+      case 'modulo-10': return 'A Jornada Contínua';
       default: return 'Módulo';
     }
   };
