@@ -703,7 +703,7 @@ const ModuleContent: React.FC<ModuleContentProps> = ({ moduleId, onClose }) => {
                   <div className="bg-purple-50 p-4 rounded-lg">
                     <h4 className="font-semibold text-purple-800 mb-2">🤝 Na Vida Social</h4>
                     <ul className="list-disc list-inside text-purple-700 text-sm space-y-1">
-                      <li>Seja seletivo com compromissos - qualidade > quantidade</li>
+                      <li>Seja seletivo com compromissos - qualidade &gt; quantidade</li>
                       <li>Escolha eventos que tragam alegria e conexão</li>
                       <li>Organize encontros que funcionem para você</li>
                       <li>Prefira jantares pequenos a festas barulhentas</li>
