@@ -7,7 +7,7 @@ export interface Module {
   title: string;
   description: string;
   icon: string;
-  iconColor: 'blue' | 'teal' | 'purple';
+  iconColor: 'blue' | 'teal' | 'purple' | 'green' | 'orange';
   status: 'available' | 'locked' | 'in-progress';
   progress: number;
   password: string;
@@ -25,7 +25,9 @@ const ModuleCard: React.FC<ModuleCardProps> = ({ module, onUnlock, onStart }) =>
     const gradients = {
       blue: 'linear-gradient(135deg, #1e40af, #3b82f6)',
       teal: 'linear-gradient(135deg, #0891b2, #06b6d4)',
-      purple: 'linear-gradient(135deg, #7c3aed, #a855f7)'
+      purple: 'linear-gradient(135deg, #7c3aed, #a855f7)',
+      green: 'linear-gradient(135deg, #059669, #10b981)',
+      orange: 'linear-gradient(135deg, #ea580c, #f97316)'
     };
     return gradients[color as keyof typeof gradients];
   };
