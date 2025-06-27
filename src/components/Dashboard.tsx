@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import ProgressOverview from './ProgressOverview';
@@ -49,6 +50,28 @@ const initialModules: Module[] = [
     status: "locked", 
     progress: 0,
     password: "clareza321",
+    unlocked: false
+  },
+  {
+    id: "modulo-5",
+    title: "Pilar I - Clareza Interna Absoluta",
+    description: "Organize seu tesouro interior e transforme pensamentos complexos em comunicação clara.",
+    icon: "🎯",
+    iconColor: "teal",
+    status: "locked", 
+    progress: 0,
+    password: "clareza555",
+    unlocked: false
+  },
+  {
+    id: "modulo-6",
+    title: "Pilar II - Estratégia do Momento Certo",
+    description: "Domine a arte do timing perfeito e maximize o impacto das suas intervenções.",
+    icon: "⏰",
+    iconColor: "purple",
+    status: "locked", 
+    progress: 0,
+    password: "timing666",
     unlocked: false
   }
 ];
